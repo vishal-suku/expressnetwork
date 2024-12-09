@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
 import datetime
 
 from drf_spectacular.utils import extend_schema,OpenApiParameter
@@ -22,6 +21,7 @@ from generics import paginations
 from django.utils import timezone
 # Create your views here.
 
+# For test users
 class UserView(viewsets.ViewSet):
     permission_classes = [IsAuthenticated, UsersPermission]
     serializer_class = serializers.UserInfoModelSerializer
