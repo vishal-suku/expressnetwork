@@ -236,7 +236,7 @@ class UserView(viewsets.ViewSet):
         return Response(data={"status": "User deleted successfully"}, status=status.HTTP_202_ACCEPTED)
 
 
-
+# For Hub CRUD Operations
 class OrganizationView(viewsets.ViewSet):
     permission_classes = [IsAuthenticated, OrganizationPermission]
     serializer_class = serializers.HubInfoModelSerializer
